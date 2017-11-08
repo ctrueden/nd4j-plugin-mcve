@@ -17,6 +17,7 @@ public class ND4JPlugin implements Command {
 
 	@Override
 	public void run() {
+		System.setProperty("org.bytedeco.javacpp.logger.debug", "true");
 		System.out.println("Creating ND4J thing");
 		result = Nd4j.create(1, 100);
 		System.out.println("Created ND4J thing");
